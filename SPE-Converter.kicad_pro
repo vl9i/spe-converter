@@ -52,15 +52,15 @@
         "zones": {
           "border_display_style": 2,
           "border_hatch_pitch": 0.5,
-          "corner_radius": 0.3,
-          "corner_smoothing": 2,
+          "corner_radius": 0.0,
+          "corner_smoothing": 0,
           "fill_mode": 0,
           "hatch_gap": 1.5,
           "hatch_orientation": 0.0,
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.25,
+          "min_clearance": 0.35,
           "min_island_area": 10.0,
           "min_thickness": 0.2,
           "pad_connection": 2,
@@ -106,18 +106,6 @@
           ""
         ],
         [
-          "courtyards_overlap|58105000|59705000|a8b18f60-567f-492f-9340-f53f50e5e6db|f07bfd25-548a-4e5f-9746-a4c74ca90521",
-          ""
-        ],
-        [
-          "footprint_symbol_mismatch|118600000|91730000|15e054dc-141d-4286-840d-c2a31bcfdcca|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "footprint_symbol_mismatch|82550000|98375000|103ac8af-cf61-4a49-a26c-f2e8670167a0|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
           "footprint_type_mismatch|63600000|63700000|a8b18f60-567f-492f-9340-f53f50e5e6db|00000000-0000-0000-0000-000000000000",
           ""
         ],
@@ -138,15 +126,11 @@
           ""
         ],
         [
-          "lib_footprint_mismatch|63385000|81381500|f07bfd25-548a-4e5f-9746-a4c74ca90521|00000000-0000-0000-0000-000000000000",
+          "malformed_courtyard|56190000|98950000|f07bfd25-548a-4e5f-9746-a4c74ca90521|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "pth_inside_courtyard|58800000|63700000|c6a5f7f1-6c03-4c3e-af94-eca6f3ff80f6|f07bfd25-548a-4e5f-9746-a4c74ca90521",
-          ""
-        ],
-        [
-          "pth_inside_courtyard|68400000|63700000|298ba9d7-7d46-4b34-a400-4b5cb49631c6|f07bfd25-548a-4e5f-9746-a4c74ca90521",
+          "malformed_courtyard|71010000|98950000|f07bfd25-548a-4e5f-9746-a4c74ca90521|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
@@ -166,7 +150,7 @@
         "clearance": "error",
         "connection_width": "warning",
         "copper_edge_clearance": "error",
-        "copper_sliver": "warning",
+        "copper_sliver": "ignore",
         "courtyards_overlap": "error",
         "creepage": "error",
         "diff_pair_gap_out_of_range": "error",
@@ -203,7 +187,7 @@
         "shorting_items": "error",
         "silk_edge_clearance": "ignore",
         "silk_over_copper": "ignore",
-        "silk_overlap": "warning",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
@@ -243,7 +227,7 @@
         "min_track_width": 0.2,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -623,7 +607,7 @@
         "diff_pair_width": 0.177,
         "name": "100-diff",
         "pcb_color": "rgb(0, 194, 194)",
-        "priority": 2,
+        "priority": 3,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.177,
         "tuning_profile": "",
@@ -634,7 +618,7 @@
         "clearance": 0.2,
         "name": "50-single",
         "pcb_color": "rgb(96, 130, 69)",
-        "priority": 1,
+        "priority": 2,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.1565,
         "tuning_profile": "",
@@ -642,10 +626,18 @@
         "via_drill": 0.3
       },
       {
+        "clearance": 0.4,
+        "name": "Earth",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "tuning_profile": ""
+      },
+      {
         "clearance": 0.2,
         "name": "GND",
         "pcb_color": "rgb(132, 132, 132)",
-        "priority": 0,
+        "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
         "tuning_profile": "",
@@ -706,6 +698,10 @@
       {
         "netclass": "100-diff",
         "pattern": "/SPE Conn/MDI*"
+      },
+      {
+        "netclass": "Earth",
+        "pattern": "Earth"
       }
     ]
   },
@@ -909,7 +905,7 @@
         "uuid": "3f5263ee-982c-4765-ab33-cfbaafee39ad"
       }
     ],
-    "used_designators": "",
+    "used_designators": "R506,R508-509,J502,#PWR506-507,#PWR512-515,C506-508,H102-104,FID101-106",
     "variants": [
       {
         "name": "100M"

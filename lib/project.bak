@@ -8495,7 +8495,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(in_pos_files no)
+		(in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "H"
 			(at 0 5.08 0)
@@ -8517,7 +8517,7 @@
 				)
 			)
 		)
-		(property "Footprint" "project:JLC_Tooling_Hole"
+		(property "Footprint" ""
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
